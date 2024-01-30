@@ -1,1 +1,5 @@
-export enum Company {}
+enum Company {
+  Google = "Google",
+}
+
+export default Company;
