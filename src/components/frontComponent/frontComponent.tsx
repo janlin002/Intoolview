@@ -1,24 +1,14 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
+
+import Card from "@/components/card/card";
+import { mockData } from "@/utils/mockData";
 
 type Props = {
   handleClick: (e: any) => void;
 };
 
 const FrontComponent = ({ handleClick }: Props) => {
-  return (
-    <>
-      <Box
-        width="auto"
-        sx={{
-          border: "1px solid red",
-        }}
-      >
-        FrontComponent
-      </Box>
-      <Button onClick={handleClick}>翻頁</Button>
-    </>
-  );
+  return <Card handleClick={handleClick} data={mockData} />;
 };
 
 export default FrontComponent;
