@@ -31,24 +31,23 @@ feat: something(#branch-name)
 ### 資料格式
 
 ```js
-[
-    {
-        questionTitle: string,
-        questionContent: Array<string | Array<string>>,
-        answerContent: Array<string | Array<string>>,
-        tag: Tag,
-        company: Company | null
-    }
-]
+export type Data = {
+  questionType: QuestionType;
+  questionContent: Array<string | Array<string>>;
+  answerContent: Array<string | Array<string>>;
+  tag?: Array<Tag>;
+  company?: Company | null;
+};
+
 ```
 
-`content` 如果是 `Array<string>` 格式的話，代表中間要塞入一張圖片
+`Content` 如果是 `Array<string>` 格式的話，代表中間要塞入一張圖片
 
 ```js
 [
   {
-    questionTitle: "什麼是 Hoisting",
-    questionContent: ["我是內容", ["http://..."], "我是內容"],
+    questionType: QuestionType.JavaScript,
+    questionContent: ["我是內容", ["https://..."], "我是內容"],
     ...略,
   },
 ];
