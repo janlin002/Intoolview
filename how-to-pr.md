@@ -14,7 +14,21 @@ name-number
 ex. jan-01, jan-02, ...
 ```
 
-基本格式如下：
+### commit
+
+```bash
+feat: something(#branch-name)
+```
+
+`feat`: `feat` | `fix` | `docs` | `style` | `refactor` | `perf` | `test` | `chore` | `revert`
+
+`something`: 簡單描述你做了什麼事情
+
+`branch-name`: 該隻 `branch` 的名字
+
+對於 feat 不知道要填什麼的話，可參考[這篇文章](https://wadehuanglearning.blogspot.com/2019/05/commit-commit-commit-why-what-commit.html)
+
+### 資料格式
 
 ```js
 [
