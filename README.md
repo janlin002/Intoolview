@@ -12,6 +12,6 @@
 
 ### 發起 PR
 
-請參考這個[連結]()
+請參考這個[連結](https://github.com/janlin002/Intoolview/blob/main/how-to-pr.md)
 
 如果這個專案有幫助到你的話，不妨給個 `star` 吧

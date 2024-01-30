@@ -1,1 +1,5 @@
-export enum Tag {}
+enum Tag {
+  JavaScript = "JavaScript",
+}
+
+export default Tag;
