@@ -1,40 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Intoolview
 
-## Getting Started
+> interview + tool = 'intoolview'
 
-First, run the development server:
+### why Intoolview?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+在過去每次在要準備面試的時候，才發現筆記散落在各地，不方便整理，準備起來也沒有什麼效率
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+再來就是發現沒有一個平台在做面試題的考古題，所以在面試前會沒辦法做充足的準備
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+透過 intoolview 以遊戲的方式去準備面試、進而發現自己沒有準備到的部分，並且可以看即將面試公司的考古題，準備起來也比較有方向
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 發起 PR
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+請參考這個[連結]()
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+如果這個專案有幫助到你的話，不妨給個 `star` 吧
