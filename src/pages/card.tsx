@@ -12,11 +12,13 @@ const Card = () => {
     setIsFlipped(!isFlipped);
   };
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-      <FrontComponent handleClick={handleClick} />
+    <div className="flex justify-center mt-20">
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+        <FrontComponent handleClick={handleClick} />
 
-      <BackComponent handleClick={handleClick} />
-    </ReactCardFlip>
+        <BackComponent handleClick={handleClick} />
+      </ReactCardFlip>
+    </div>
   );
 };
 
