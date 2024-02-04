@@ -1,57 +1,61 @@
 import React from "react";
+import { Icon } from "@iconify/react";
+import { IconButton } from "@material-tailwind/react";
+import Image from "next/image";
+
 import {
   Card,
+  CardContent,
+  CardFooter,
   CardHeader,
-  CardMedia,
-  Typography,
-  CardActions,
-} from "@mui/material";
-import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
-
-import { StyledFlopIcon, StyledCardContent, StyledTooltip } from "./card.style";
-import { Data } from "@/types";
+  CardTitle,
+} from "@/components/ui/card";
 
 type Props = {
   handleClick: (e: any) => void;
-  data: Data;
+  data: any;
   isFront?: boolean;
 };
 
 const CardComponent = ({ handleClick, data, isFront = true }: Props) => {
   const contentData = isFront ? data.questionContent : data.answerContent;
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader subheader={isFront && data.questionType} />
 
-      <StyledCardContent>
-        {contentData.map((item, index) =>
-          Array.isArray(item) ? (
-            <CardMedia
-              component="img"
-              height="194"
-              image={item[0]}
-              alt="question image"
-              key={index}
-            />
+  return (
+    <Card className="max-w-sm">
+      <CardHeader>
+        <CardTitle>{isFront ? data.questionType : "解答"}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {contentData.map((content: any, index: number) =>
+          Array.isArray(content) ? (
+            <div key={index}>
+              <Image
+                unoptimized
+                src={content[0]}
+                width={0}
+                height={0}
+                style={{
+                  width: "auto",
+                  height: "auto",
+                }}
+                alt=""
+              />
+            </div>
           ) : (
-            <Typography variant="body2" color="text.secondary" key={index}>
-              {item}
-            </Typography>
+            <p key={index}>{content}</p>
           )
         )}
-      </StyledCardContent>
-
-      <CardActions disableSpacing>
-        <StyledTooltip
-          title={isFront ? "查看答案" : "查看題目"}
-          placement="top"
-          arrow
+      </CardContent>
+      <CardFooter>
+        <IconButton
+          variant="text"
+          className="rounded-full ml-auto"
+          placeholder=""
+          onClick={handleClick}
         >
-          <StyledFlopIcon>
-            <TrendingFlatIcon onClick={handleClick} />
-          </StyledFlopIcon>
-        </StyledTooltip>
-      </CardActions>
+          <Icon icon="fluent:arrow-hook-up-right-24-regular" width={16} />
+        </IconButton>
+      </CardFooter>
     </Card>
   );
 };
