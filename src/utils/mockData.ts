@@ -5,16 +5,8 @@ import QuestionType from "@/types/questionType";
 
 export const mockData: Data = {
   questionType: QuestionType.JavaScript,
-  questionContent: [
-    "我是內容",
-    ["https://avatars.githubusercontent.com/u/10256257?v=4"],
-    "我是內容",
-  ],
-  answerContent: [
-    "我是內容",
-    ["https://static.pexels.com/photos/59523/pexels-photo-59523.jpeg"],
-    "我是內容",
-  ],
+  questionContent: ["什麼是 Hoisting?"],
+  answerContent: ["就那樣啊"],
   tag: [Tag.JavaScript],
   company: Company.Google,
 };
