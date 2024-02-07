@@ -1,15 +1,20 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { ThemeProvider } from "@material-tailwind/react";
+import { Provider } from "react-redux";
+
+import { store } from "@/store/store";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" suppressHydrationWarning>
       <Head />
       <body>
-        <ThemeProvider>
-          <Main />
-        </ThemeProvider>
-        <NextScript />
+        <Provider store={store}>
+          <ThemeProvider>
+            <Main />
+          </ThemeProvider>
+          <NextScript />
+        </Provider>
       </body>
     </Html>
   );

@@ -81,13 +81,7 @@
     @apply flex justify-center mt-20;
   }
 
-  button {
+  /* button {
     @apply bg-white text-black rounded-sm hover:bg-inherit hover:text-white hover:border  w-[100px] h-6;
-  }
+  } */
 }
-
-/* @layer utilities {
-  p {
-    @apply text-white;
-  }
-} */
