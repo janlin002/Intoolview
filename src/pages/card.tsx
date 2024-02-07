@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactCardFlip from "react-card-flip";
 
 import FrontComponent from "@/components/frontComponent/frontComponent";
@@ -7,6 +7,7 @@ import Button from "@/components/button/button";
 
 const Card = () => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [questionList, setQuestionList] = useState([]);
 
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -14,7 +15,7 @@ const Card = () => {
   };
   return (
     <>
-      <div className="flex justify-center mt-20">
+      <div className="container">
         <div className="flex flex-col gap-y-5">
           <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
             <FrontComponent handleClick={handleClick} />
