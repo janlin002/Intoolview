@@ -1,4 +1,3 @@
-import Tag from "@/types/tag";
 import Company from "@/types/company";
 import type { Data } from "@/types";
 import QuestionType from "@/types/questionType";
@@ -16,7 +15,6 @@ const ReactData = [
       ["https://static.pexels.com/photos/59523/pexels-photo-59523.jpeg"],
       "我是內容",
     ],
-    tag: [Tag.JavaScript],
     company: Company.Google,
   },
 ];

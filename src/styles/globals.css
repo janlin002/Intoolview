@@ -74,6 +74,9 @@
     @apply bg-background text-foreground;
     background-color: #2e2e2e;
   }
+  select {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-pointer;
+  }
 }
 
 @layer components {
@@ -81,7 +84,11 @@
     @apply flex justify-center mt-20;
   }
 
-  /* button {
-    @apply bg-white text-black rounded-sm hover:bg-inherit hover:text-white hover:border  w-[100px] h-6;
-  } */
+  .white-button {
+    @apply text-gray-800 bg-white hover:bg-gray-900 hover:text-white hover:border box-border focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 w-[100px] h-[40px];
+  }
+
+  .dark-button {
+    @apply text-white bg-gray-800 hover:bg-white hover:text-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 w-[100px];
+  }
 }
