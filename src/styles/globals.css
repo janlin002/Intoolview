@@ -74,4 +74,17 @@
     @apply bg-background text-foreground;
     background-color: #2e2e2e;
   }
+  select {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    @apply flex justify-center mt-20;
+  }
+
+  .white-button {
+    @apply text-gray-800 bg-white hover:enabled:bg-gray-900 hover:enabled:text-white hover:enabled:border box-border focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 w-[100px] h-[40px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white;
+  }
 }

@@ -3,7 +3,7 @@ import { ThemeProvider } from "@material-tailwind/react";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" suppressHydrationWarning>
       <Head />
       <body>
         <ThemeProvider>

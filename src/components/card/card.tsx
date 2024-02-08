@@ -10,23 +10,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import type { Data } from "@/types";
 
 type Props = {
   handleClick: (e: any) => void;
-  data: any;
+  data: Data;
   isFront?: boolean;
 };
 
 const CardComponent = ({ handleClick, data, isFront = true }: Props) => {
-  const contentData = isFront ? data.questionContent : data.answerContent;
+  const contentData = isFront ? data?.questionContent : data?.answerContent;
 
   return (
     <Card className="w-[500px]">
       <CardHeader>
-        <CardTitle>{isFront ? data.questionType : "解答"}</CardTitle>
+        <CardTitle>{isFront ? data?.questionType : "解答"}</CardTitle>
       </CardHeader>
       <CardContent>
-        {contentData.map((content: any, index: number) =>
+        {contentData?.map((content: Array<string> | string, index: number) =>
           Array.isArray(content) ? (
             <div key={index}>
               <Image
