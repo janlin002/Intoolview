@@ -24,7 +24,7 @@ const CardComponent = ({ handleClick, data, isFront = true }: Props) => {
   return (
     <Card className="w-[500px]">
       <CardHeader>
-        <CardTitle>{isFront ? data.questionType : "解答"}</CardTitle>
+        <CardTitle>{isFront ? data?.questionType : "解答"}</CardTitle>
       </CardHeader>
       <CardContent>
         {contentData?.map((content: Array<string> | string, index: number) =>
