@@ -12,10 +12,16 @@ const db: TDB = {
       answerContent: ["就那樣啊"],
       company: [Company.Google, Company.Facebook],
     },
+    {
+      questionType: QuestionType.JavaScript,
+      questionContent: ["什麼是 Event Loop"],
+      answerContent: ["就那樣啊"],
+      company: [Company.Google, Company.Facebook],
+    },
   ],
   [QuestionType.React]: [
     {
-      questionType: QuestionType.JavaScript,
+      questionType: QuestionType.React,
       questionContent: ["什麼是 React"],
       answerContent: ["就那樣啊"],
       company: [Company.Google],

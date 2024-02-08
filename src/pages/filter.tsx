@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 
 import Company from "@/types/company";
 import QuestionType from "@/types/questionType";
 import db from "@/db/db";
+import { createQuiz } from "@/store/slice/filterSlice";
 
 const Filter = () => {
+  const router = useRouter();
   const [companyList, setCompanyList] = useState<Array<Company>>([]);
+  const dispatch = useDispatch();
 
   const [selectOption, setSelectOption] = useState<{
     lang: QuestionType;
@@ -16,6 +21,13 @@ const Filter = () => {
     questionNum: "",
     company: null,
   });
+
+  const handleStartQuiz = () => {
+    dispatch(createQuiz(selectOption));
+
+    // redirect to card page
+    router.push("/card");
+  };
 
   // dynamic create company list
   useEffect(() => {
@@ -96,7 +108,12 @@ const Filter = () => {
           ))}
         </select>
 
-        <button type="button" className="white-button ml-auto">
+        <button
+          type="button"
+          className="white-button ml-auto "
+          onClick={handleStartQuiz}
+          disabled={selectOption.questionNum === ""}
+        >
           開始測驗
         </button>
       </div>
